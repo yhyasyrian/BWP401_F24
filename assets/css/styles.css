@@ -167,15 +167,6 @@ a {
 .z-20 {
 	z-index: 10;
 }
-.grid-cols-3 {
-	grid-template-columns: repeat(3, 1fr);
-}
-.grid-cols-2 {
-	grid-template-columns: repeat(2, 1fr);
-}
-.grid-cols-1 {
-	grid-template-columns: repeat(1, 1fr);
-}
 /* Main Section */
 .rounded-card-horizontal {
 	border-top-right-radius: var(--bs-border-radius);
