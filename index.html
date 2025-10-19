@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الرئيسية</title>
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.rtl.min.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.rtl.min.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
@@ -14,29 +13,32 @@
     <!-- Start Header -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
-            <a class="navbar-brand text-primary fw-bold" href="./index.html">عروس الساحل</a>
+            <a data-trans-key="title" class="navbar-brand text-primary fw-bold" href="./index.html">عروس الساحل</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a data-trans-key="home" class="nav-link link active" aria-current="page"
+                            href="./index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-trans-key="events" class="nav-link link" href="./events.html">الفعاليات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-trans-key="about" class="nav-link link" href="./about.html">دليل الموقع</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-trans-key="contact" class="nav-link link" href="./contact.html">تواصل معنا</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <img onclick="changeLanguage()" id="language-flag" style="width: 32px; height: 24px;" src="./assets/images/flag_USA.svg" />
+            </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link link active" aria-current="page" href="./index.html">الرئيسية</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link link" href="./events.html">الفعاليات</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link link" href="./about.html">دليل الموقع</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link link" href="./contact.html">تواصل معنا</a>
-                    </li>
-
-                </ul>
-            </div>
         </div>
     </nav>
     <!-- End Header -->
@@ -46,12 +48,15 @@
             <div class="container">
                 <div class="row align-items-center g-2 min-vh-50">
                     <div class="col-lg-6">
-                        <h1 class="display-4 fw-bold mb-4">مرحباً بكم في فعاليات ساحلنا</h1>
-                        <p class="lead mb-4">اكتشف أجمل الفعاليات والأنشطة في مدينتنا الساحلية الجميلة. من الثقافة إلى
+                        <h1 data-trans-key="welcome" class="display-4 fw-bold mb-4">مرحباً بكم في فعاليات ساحلنا</h1>
+                        <p data-trans-key="welcome-description" class="lead mb-4">اكتشف أجمل الفعاليات والأنشطة في
+                            مدينتنا الساحلية الجميلة. من الثقافة إلى
                             الرياضة، ومن الموسيقى إلى الفعاليات العائلية</p>
                         <div class="d-flex flex-wrap gap-3">
-                            <a href="./events.html" class="btn btn-light btn-lg">استكشف الفعاليات</a>
-                            <a href="#event-for-this-week" class="btn btn-outline-light btn-lg">فعاليات هذا الأسبوع</a>
+                            <a data-trans-key="explore-events" href="./events.html" class="btn btn-light btn-lg">استكشف
+                                الفعاليات</a>
+                            <a data-trans-key="events-this-week" href="#event-for-this-week"
+                                class="btn btn-outline-light btn-lg">فعاليات هذا الأسبوع</a>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -65,7 +70,7 @@
         <!-- End Hero Section -->
         <!-- Gallery Section -->
         <section class="container my-5 padding-for-mobile">
-            <h2 class="text-center mb-4 text-primary fw-bold">معرض الصور</h2>
+            <h2 data-trans-key="gallery" class="text-center mb-4 text-primary fw-bold">معرض الصور</h2>
             <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="active"
@@ -110,33 +115,35 @@
                 <button class="carousel-control-prev" type="button" style="opacity: 0.8;"
                     data-bs-target="#galleryCarousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">السابق</span>
+                    <span data-trans-key="previous" class="visually-hidden">السابق</span>
                 </button>
                 <button class="carousel-control-next" type="button" style="opacity: 0.8;"
                     data-bs-target="#galleryCarousel" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">التالي</span>
+                    <span data-trans-key="next" class="visually-hidden">التالي</span>
                 </button>
             </div>
         </section>
         <!-- End Gallery Section -->
         <!-- Event for this week -->
         <section id="event-for-this-week" class="container my-4 padding-for-mobile">
-            <h2 class="text-center mb-4 text-primary fw-bold">الفعاليات لهذا الأسبوع</h2>
+            <h2 data-trans-key="events-this-week" class="text-center mb-4 text-primary fw-bold">الفعاليات لهذا الأسبوع
+            </h2>
             <div class="row">
                 <div class="col-12 col-lg-6">
                     <div class="card mb-3 p-0">
                         <div class="row g-2">
                             <div class="col-xxl-5 photo-effect rounded-card-horizontal">
                                 <img src="./assets/images/تجمع-اهل-اللاذقية-في-حفل-اطلاق-الهوية-البصرية-1.jpg"
-                                    class="img-fluid"
-                                    alt="تجمع اهل اللاذقية في حفل اطلاق الهوية البصرية 1">
+                                    class="img-fluid" alt="تجمع اهل اللاذقية في حفل اطلاق الهوية البصرية 1">
                             </div>
                             <div class="col-xxl-7">
                                 <div class="card-body p-2">
-                                    <h5 class="card-title">حفل اطلاق الهوية البصرية في اللاذقية</h5>
+                                    <h5 data-trans-key="event-title-1" class="card-title">حفل اطلاق الهوية البصرية في
+                                        اللاذقية</h5>
                                     <p class="card-text m-lg-0">
-                                        لقطات مميزة تنقل مشهد المشاركة الواسعة لأهالي اللاذقية في فعالية الهوية البصرية من
+                                    <p data-trans-key="event-description-1" class="card-text m-lg-0">لقطات مميزة تنقل
+                                        مشهد المشاركة الواسعة لأهالي اللاذقية في فعالية الهوية البصرية من
                                         قلب ساحة الشيخ ضاهر.
                                     </p>
                                     <time datetime="2025-07-04"><small>2025-07-04</small></time>
@@ -155,9 +162,11 @@
                             </div>
                             <div class="col-xxl-7">
                                 <div class="card-body p-2">
-                                    <h5 class="card-title">مهرجان سوق التسوق في مدينة جبلة</h5>
+                                    <h5 data-trans-key="event-title-2" class="card-title">مهرجان سوق التسوق في مدينة
+                                        جبلة</h5>
                                     <p class="card-text m-lg-0">
-                                        بمشاركة كريمة من السيد محمد عثمان محافظ اللاذقية، وقائد الأمن الداخلي للمحافظة
+                                    <p data-trans-key="event-description-2" class="card-text m-lg-0">بمشاركة كريمة من
+                                        السيد محمد عثمان محافظ اللاذقية، وقائد الأمن الداخلي للمحافظة
                                         والحضور الكرام تم اليوم افتتاح مهرجان سوق التسوق في مدينة جبلة.
                                     </p>
                                     <time datetime="2025-09-14"><small>2025-09-14</small></time>
@@ -175,9 +184,11 @@
                             </div>
                             <div class="col-xxl-7">
                                 <div class="card-body p-2">
-                                    <h5 class="card-title">افتتاح معرض "العودة إلى المدرسة"</h5>
+                                    <h5 data-trans-key="event-title-3" class="card-title">افتتاح معرض "العودة إلى
+                                        المدرسة"</h5>
                                     <p class="card-text m-lg-0">
-                                        تحت رعاية وزارة الاقتصاد والصناعة ومحافظة اللاذقية، وبمناسبة اقتراب العام الدراسي
+                                    <p data-trans-key="event-description-3" class="card-text m-lg-0">تحت رعاية وزارة
+                                        الاقتصاد والصناعة ومحافظة اللاذقية، وبمناسبة اقتراب العام الدراسي
                                         الجديد، افتتح معرض "العودة إلى المدرسة" والذي يضم تشكيلة واسعة من المستلزمات
                                         المدرسية بأسعار مخفضة
                                     </p>
@@ -196,9 +207,9 @@
                             </div>
                             <div class="col-xxl-7">
                                 <div class="card-body p-2">
-                                    <h5 class="card-title">افتاح معرض للحرف اليدوية</h5>
-                                    <p class="card-text m-lg-0">
-                                        بحضور محافظ اللاذقية السيد محمد عثمان، افتُتح اليوم معرض للحرف اليدوية والتقليدية في
+                                    <h5 data-trans-key="event-title-4" class="card-title">افتاح معرض للحرف اليدوية</h5>
+                                    <p data-trans-key="event-description-4" class="card-text m-lg-0">بحضور محافظ
+                                        اللاذقية السيد محمد عثمان، افتُتح اليوم معرض للحرف اليدوية والتقليدية في
                                         مدينة كسب، بمشاركة عدد من الحرفيين من مختلف مناطق المحافظة
                                     </p>
                                     <time datetime="2025-07-28"><small>2025-07-28</small></time>
@@ -212,12 +223,15 @@
         <!-- Event for this week -->
         <!-- Start Categories -->
         <section class="container my-4 padding-for-mobile filter-categories" data-current-type="all">
-            <h2 class="text-center mb-4 fw-bold text-primary">أقسام الفعاليات</h2>
+            <h2 data-trans-key="categories" class="text-center mb-4 fw-bold text-primary">أقسام الفعاليات</h2>
             <div class="d-flex flex-wrap gap-2 justify-content-center">
-                <button class="btn btn-outline-primary" data-type="all">جميع الأقسام</button>
-                <button class="btn btn-outline-primary" data-type="celebration">احتفالات</button>
-                <button class="btn btn-outline-primary" data-type="festival">مهرجانات</button>
-                <button class="btn btn-outline-primary" data-type="exhibition">معارض</button>
+                <button data-trans-key="all-categories" class="btn btn-outline-primary" data-type="all">جميع
+                    الأقسام</button>
+                <button data-trans-key="celebration" class="btn btn-outline-primary"
+                    data-type="celebration">احتفالات</button>
+                <button data-trans-key="festival" class="btn btn-outline-primary" data-type="festival">مهرجانات</button>
+                <button data-trans-key="exhibition" class="btn btn-outline-primary"
+                    data-type="exhibition">معارض</button>
             </div>
             <div class="row mt-4 row-gap-3">
                 <div class="col-12 col-md-6 col-lg-4 col-xxl-3" data-type="celebration">
@@ -227,11 +241,13 @@
                                 class="card-img-top" alt="حفل اطلاق الهوية البصرية في اللاذقية">
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">حفل اطلاق الهوية البصرية في اللاذقية</h5>
-                            <p class="card-text">لقطات مميزة تنقل مشهد المشاركة الواسعة لأهالي اللاذقية في فعالية الهوية
+                            <h5 data-trans-key="event-title-1" class="card-title">حفل اطلاق الهوية البصرية في اللاذقية
+                            </h5>
+                            <p data-trans-key="event-description-1" class="card-text m-lg-0">لقطات مميزة تنقل مشهد
+                                المشاركة الواسعة لأهالي اللاذقية في فعالية الهوية
                                 البصرية من قلب ساحة الشيخ ضاهر.</p>
                             <div class="d-flex flex-column h-full justify-content-end">
-                                <a href="./event.html" class="btn btn-primary">تفاصيل الفعالية</a>
+                                <a href="./event.html" class="btn btn-primary" data-trans-key="event-details">تفاصيل الفعالية</a>
                             </div>
                         </div>
                     </div>
@@ -243,11 +259,12 @@
                                 alt="مهرجان سوق التسوق في مدينة جبلة">
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">مهرجان سوق التسوق في مدينة جبلة</h5>
-                            <p class="card-text">بمشاركة كريمة من السيد محمد عثمان محافظ اللاذقية، وقائد الأمن الداخلي
+                            <h5 data-trans-key="event-title-2" class="card-title">مهرجان سوق التسوق في مدينة جبلة</h5>
+                            <p data-trans-key="event-description-2" class="card-text m-lg-0">بمشاركة كريمة من السيد محمد
+                                عثمان محافظ اللاذقية، وقائد الأمن الداخلي
                                 للمحافظة والحضور الكرام تم اليوم افتتاح مهرجان سوق التسوق في مدينة جبلة.</p>
                             <div class="d-flex flex-column h-full justify-content-end">
-                                <a href="./event.html" class="btn btn-primary">تفاصيل الفعالية</a>
+                                <a href="./event.html" class="btn btn-primary" data-trans-key="event-details">تفاصيل الفعالية</a>
                             </div>
                         </div>
                     </div>
@@ -259,12 +276,13 @@
                                 alt="افتتاح معرض العودة إلى المدرسة">
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">افتتاح معرض "العودة إلى المدرسة"</h5>
-                            <p class="card-text">تحت رعاية وزارة الاقتصاد والصناعة ومحافظة اللاذقية، وبمناسبة اقتراب
+                            <h5 data-trans-key="event-title-3" class="card-title">افتتاح معرض "العودة إلى المدرسة"</h5>
+                            <p data-trans-key="event-description-3" class="card-text m-lg-0">تحت رعاية وزارة الاقتصاد
+                                والصناعة ومحافظة اللاذقية، وبمناسبة اقتراب
                                 العام الدراسي الجديد، افتتح معرض "العودة إلى المدرسة" والذي يضم تشكيلة واسعة من
                                 المستلزمات المدرسية بأسعار مخفضة</p>
                             <div class="d-flex flex-column h-full justify-content-end">
-                                <a href="./event.html" class="btn btn-primary">تفاصيل الفعالية</a>
+                                <a href="./event.html" class="btn btn-primary" data-trans-key="event-details">تفاصيل الفعالية</a>
                             </div>
                         </div>
                     </div>
@@ -276,11 +294,11 @@
                                 alt="افتاح معرض للحرف اليدوية">
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">افتتاح معرض للحرف اليدوية</h5>
-                            <p class="card-text">بحضور محافظ اللاذقية السيد محمد عثمان، افتُتح اليوم معرض للحرف اليدوية
+                            <h5 data-trans-key="event-title-4" class="card-title">افتتاح معرض للحرف اليدوية</h5>
+                            <p data-trans-key="event-description-4" class="card-text m-lg-0">بحضور محافظ اللاذقية السيد محمد عثمان، افتُتح اليوم معرض للحرف اليدوية
                                 والتقليدية في مدينة كسب، بمشاركة عدد من الحرفيين من مختلف مناطق المحافظة</p>
                             <div class="d-flex flex-column h-full justify-content-end">
-                                <a href="./event.html" class="btn btn-primary">تفاصيل الفعالية</a>
+                                <a href="./event.html" class="btn btn-primary" data-trans-key="event-details">تفاصيل الفعالية</a>
                             </div>
                         </div>
                     </div>
@@ -290,7 +308,7 @@
         <!-- End Categories -->
         <!-- Start Organizers Section -->
         <section class="container my-5 padding-for-mobile">
-            <h2 class="text-center mb-5 text-primary fw-bold">فريق المنظمين</h2>
+            <h2 data-trans-key="organizers" class="text-center mb-5 text-primary fw-bold">فريق المنظمين</h2>
             <div class="row g-2 justify-content-center">
                 <div class="col-12 col-md-4 col-xl-2">
                     <div class="card">
@@ -298,7 +316,7 @@
                             <img src="./assets/images/user.png" class="card-img-top rounded-circle" alt="yhya_283516">
                         </div>
                         <div class="card-body">
-                            <h4 class="text-center">يحيى نسب</h4>
+                            <h4 data-trans-key="organizer-name-1" class="text-center">يحيى نسب</h4>
                             <h5 class="card-title text-center">yhya_283516</h5>
                         </div>
                     </div>
@@ -309,7 +327,7 @@
                             <img src="./assets/images/user.png" class="card-img-top rounded-circle" alt="nayf_299019">
                         </div>
                         <div class="card-body">
-                            <h4 class="text-center">نايف أحمد غزلان</h4>
+                            <h4 data-trans-key="organizer-name-2" class="text-center">نايف أحمد غزلان</h4>
                             <h5 class="card-title text-center">nayf_299019</h5>
                         </div>
                     </div>
@@ -320,7 +338,7 @@
                             <img src="./assets/images/user.png" class="card-img-top rounded-circle" alt="taimaa_286691">
                         </div>
                         <div class="card-body">
-                            <h4 class="text-center">تيماء أبو حسون</h4>
+                            <h4 data-trans-key="organizer-name-3" class="text-center">تيماء أبو حسون</h4>
                             <h5 class="card-title text-center">taimaa_286691</h5>
                         </div>
                     </div>
@@ -331,7 +349,7 @@
                             <img src="./assets/images/user.png" class="card-img-top rounded-circle" alt="ward_285140">
                         </div>
                         <div class="card-body">
-                            <h4 class="text-center">ورد ايمن رعوان</h4>
+                            <h4 data-trans-key="organizer-name-4" class="text-center">ورد ايمن رعوان</h4>
                             <h5 class="card-title text-center">ward_285140</h5>
                         </div>
                     </div>
@@ -342,7 +360,7 @@
                             <img src="./assets/images/user.png" class="card-img-top rounded-circle" alt="sham_283701">
                         </div>
                         <div class="card-body">
-                            <h4 class="text-center">شام نعيم</h4>
+                            <h4 data-trans-key="organizer-name-5" class="text-center">شام نعيم</h4>
                             <h5 class="card-title text-center">sham_283701</h5>
                         </div>
                     </div>
@@ -354,20 +372,25 @@
     <footer class="bg-body-tertiary py-2">
         <div class="container mx-auto row p-4">
             <div class="col-12 col-md-6 px-md-4">
-                <h4 class="fw-medium border-bottom border-primary">عروس الساحل</h4>
-                <p class="text-muted">عروس الساحل هي موقع يهتم بالفعاليات المختلفة في المدينة</p>
+                <h4 data-trans-key="title" class="fw-medium border-bottom border-primary">عروس الساحل</h4>
+                <p data-trans-key="footer-description" class="text-muted">عروس الساحل هي موقع يهتم بالفعاليات المختلفة
+                    في المدينة</p>
             </div>
             <div class="col-12 col-md-3 px-md-4">
-                <h4 class="fw-medium border-bottom border-primary">الفعاليات</h4>
+                <h4 data-trans-key="events" class="fw-medium border-bottom border-primary">الفعاليات</h4>
                 <nav class="d-flex flex-column gap-2">
-                    <a href="./event.html" class="link w-fit">حفل اطلاق الهوية البصرية في اللاذقية</a>
-                    <a href="./event.html" class="link w-fit">مهرجان سوق التسوق في مدينة جبلة</a>
-                    <a href="./event.html" class="link w-fit">افتتاح معرض "العودة إلى المدرسة</a>
-                    <a href="./event.html" class="link w-fit">افتتاح معرض للحرف اليدوية</a>
+                    <a data-trans-key="event-title-1" href="./event.html" class="link w-fit">حفل اطلاق الهوية البصرية في
+                        اللاذقية</a>
+                    <a data-trans-key="event-title-2" href="./event.html" class="link w-fit">مهرجان سوق التسوق في مدينة
+                        جبلة</a>
+                    <a data-trans-key="event-title-3" href="./event.html" class="link w-fit">افتتاح معرض "العودة إلى
+                        المدرسة</a>
+                    <a data-trans-key="event-title-4" href="./event.html" class="link w-fit">افتتاح معرض للحرف
+                        اليدوية</a>
                 </nav>
             </div>
             <div class="col-12 col-md-3 px-md-4">
-                <h4 class="fw-medium border-bottom border-primary">تابعنا</h4>
+                <h4 data-trans-key="follow-us" class="fw-medium border-bottom border-primary">تابعنا</h4>
                 <nav class="d-flex flex-row flex-wrap gap-2">
                     <a href="#" class="text-decoration-none text-dark">
                         <svg width="26" height="26" class="hover-svg" viewBox="0 0 24 24">
@@ -386,19 +409,116 @@
         </div>
         <hr class="border-primary">
         <div class="container mx-auto text-center">
-            <p class="text-muted">جميع الحقوق محفوظة لعروس الساحل © 2025</p>
+            <p data-trans-key="copyright" class="text-muted">جميع الحقوق محفوظة لعروس الساحل © 2025</p>
         </div>
     </footer>
-    
+
     <!-- Scroll to Top Button -->
     <button id="scroll-to-top" title="العودة إلى الأعلى">
         <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" />
         </svg>
     </button>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/main.js"></script>
+    <script>
+        // الترجمة هنا، استخدمت طريقة ال attribute للترجمة لان مابدي ضيف بقصص ال id وفي ترجمات لح تتكر وتعتبر عملية اني ضيف مفتاح بدل من id مثل اطر العمل الكبيرة
+        const translations = {
+            "ar": {
+                "title_of_page": "عروس الساحل",
+                "title": "عروس الساحل",
+                "home": "الرئيسية",
+                "events": "الفعاليات",
+                "about": "دليل الموقع",
+                "contact": "تواصل معنا",
+                "welcome": "مرحباً بكم في فعاليات ساحلنا",
+                "welcome-description": "اكتشف أجمل الفعاليات والأنشطة في مدينتنا الساحلية الجميلة. من الثقافة إلى الرياضة، ومن الموسيقى إلى الفعاليات العائلية",
+                "explore-events": "استكشف الفعاليات",
+                "events-this-week": "فعاليات هذا الأسبوع",
+                "gallery": "معرض الصور",
+                "previous": "السابق",
+                "next": "التالي",
+                "event-title-1": "حفل اطلاق الهوية البصرية في اللاذقية",
+                "event-description-1": "لقطات مميزة تنقل مشهد المشاركة الواسعة لأهالي اللاذقية في فعالية الهوية البصرية من قلب ساحة الشيخ ضاهر.",
+                "event-title-2": "مهرجان سوق التسوق في مدينة جبلة",
+                "event-description-2": "بمشاركة كريمة من السيد محمد عثمان محافظ اللاذقية، وقائد الأمن الداخلي للمحافظة والحضور الكرام تم اليوم افتتاح مهرجان سوق التسوق في مدينة جبلة.",
+                "event-title-3": "افتتاح معرض \"العودة إلى المدرسة\"",
+                "event-description-3": "تحت رعاية وزارة الاقتصاد والصناعة ومحافظة اللاذقية، وبمناسبة اقتراب العام الدراسي الجديد، افتتح معرض \"العودة إلى المدرسة\" والذي يضم تشكيلة واسعة من المستلزمات المدرسية بأسعار مخفضة",
+                "event-title-4": "افتاح معرض للحرف اليدوية",
+                "event-description-4": "بحضور محافظ اللاذقية السيد محمد عثمان، افتُتح اليوم معرض للحرف اليدوية والتقليدية في مدينة كسب، بمشاركة عدد من الحرفيين من مختلف مناطق المحافظة",
+                "categories": "أقسام الفعاليات",
+                "all-categories": "جميع الأقسام",
+                "celebration": "احتفالات",
+                "festival": "مهرجانات",
+                "exhibition": "معارض",
+                "organizers": "فريق المنظمين",
+                "organizer-name-1": "يحيى نسب",
+                "organizer-name-2": "نايف أحمد غزلان",
+                "organizer-name-3": "تيماء أبو حسون",
+                "organizer-name-4": "ورد ايمن رعوان",
+                "organizer-name-5": "شام نعيم",
+                "footer-description": "عروس الساحل هي موقع يهتم بالفعاليات المختلفة في المدينة",
+                "follow-us": "تابعنا",
+                "copyright": "جميع الحقوق محفوظة لعروس الساحل © 2025",
+                "event-details": "تفاصيل الفعالية"
+            },
+            "en": {
+                "title_of_page": "Coast Bride",
+                "title": "Coast Bride",
+                "home": "Home",
+                "events": "Events",
+                "about": "Site Guide",
+                "contact": "Contact Us",
+                "welcome": "Welcome to Our Coastal Events",
+                "welcome-description": "Discover the most beautiful events and activities in our beautiful coastal city. From culture to sports, from music to family events",
+                "explore-events": "Explore Events",
+                "events-this-week": "Events This Week",
+                "gallery": "Image Gallery",
+                "previous": "Previous",
+                "next": "Next",
+                "event-title-1": "Visual Identity Launch Ceremony in Latakia",
+                "event-description-1": "Distinctive shots conveying the widespread participation of Latakia residents in the visual identity event from the heart of Sheikh Daher Square.",
+                "event-title-2": "Shopping Festival in Jableh City",
+                "event-description-2": "With the gracious participation of Mr. Mohammed Othman, Governor of Latakia, the Internal Security Commander for the Governorate, and esteemed guests, the Shopping Festival in Jableh city was inaugurated today.",
+                "event-title-3": "Opening of \"Back to School\" Exhibition",
+                "event-description-3": "Under the patronage of the Ministry of Economy and Industry and Latakia Governorate, and on the occasion of the approaching new academic year, the \"Back to School\" exhibition was inaugurated, featuring a wide range of school supplies at reduced prices",
+                "event-title-4": "Opening of Handicrafts Exhibition",
+                "event-description-4": "In the presence of the Governor of Latakia, Mr. Mohammed Othman, a handicrafts and traditional crafts exhibition was opened today in the city of Kassab, with the participation of a number of artisans from various regions of the governorate",
+                "categories": "Event Categories",
+                "all-categories": "All Categories",
+                "celebration": "Celebrations",
+                "festival": "Festivals",
+                "exhibition": "Exhibitions",
+                "organizers": "Organizing Team",
+                "organizer-name-1": "Yhya Nesb",
+                "organizer-name-2": "Nayef Ahmed Ghazlan",
+                "organizer-name-3": "Taima Abu Hassoun",
+                "organizer-name-4": "Ward Ayman Rawan",
+                "organizer-name-5": "Sham Naim",
+                "footer-description": "Coast Bride is a website concerned with various events in the city",
+                "follow-us": "Follow Us",
+                "copyright": "All rights reserved to Coast Bride © 2025",
+                "event-details": "Event Details"
+            }
+        };
+        document.addEventListener("DOMContentLoaded", () => {
+            const language = localStorage.getItem("language") || "ar";
+            const html = document.documentElement;
+            html.setAttribute("lang", language);
+            html.setAttribute("dir", language === "ar" ? "rtl" : "ltr");
+            document.title = translations[language].title_of_page;
+            document.querySelectorAll("[data-trans-key]").forEach(element => {
+                element.textContent = translations[language][element.getAttribute("data-trans-key")];
+            });
+            document.getElementById("language-flag").src = `./assets/images/flag_${language === "ar" ? "USA" : "SYR"}.svg`;
+        });
+        function changeLanguage() {
+            const language = localStorage.getItem("language") || "ar";
+            localStorage.setItem("language", language === "ar" ? "en" : "ar");
+            window.location.reload();
+        }
+    </script>
 </body>
 
 </html>

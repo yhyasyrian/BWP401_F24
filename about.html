@@ -14,37 +14,40 @@
     <!-- Start Header -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
-            <a class="navbar-brand text-primary fw-bold" href="./index.html">عروس الساحل</a>
+            <a data-trans-key="title" class="navbar-brand text-primary fw-bold" href="./index.html">عروس الساحل</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a data-trans-key="home" class="nav-link link" aria-current="page" href="./index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-trans-key="events" class="nav-link link" href="./events.html">الفعاليات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-trans-key="about" class="nav-link link active" href="./about.html">دليل الموقع</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-trans-key="contact" class="nav-link link" href="./contact.html">تواصل معنا</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <img onclick="changeLanguage()" id="language-flag" style="width: 32px; height: 24px;"
+                    src="./assets/images/flag_USA.svg" />
+            </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link link" aria-current="page" href="./index.html">الرئيسية</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link link" href="./events.html">الفعاليات</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link link active" href="./about.html">دليل الموقع</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link link" href="./contact.html">تواصل معنا</a>
-                    </li>
-
-                </ul>
-            </div>
         </div>
     </nav>
     <!-- End Header -->
     <main>
         <section class="container my-5">
             <div class="text-center mb-5">
-                <h1 class="display-4 text-primary fw-bold mb-3">عن عروس الساحل</h1>
-                <p class="lead text-muted">دليلك الشامل للفعاليات في محافظة اللاذقية</p>
+                <h1 class="display-4 text-primary fw-bold mb-3" data-trans-key="about-coast-bride">عن عروس الساحل</h1>
+                <p class="lead text-muted" data-trans-key="guided-description">دليلك الشامل للفعاليات في محافظة اللاذقية</p>
             </div>
 
             <div class="row g-4 justify-content-center">
@@ -61,8 +64,8 @@
                                     </svg>
                                 </div>
                             </div>
-                            <h3 class="h4 text-center mb-3 text-primary">هدفنا</h3>
-                            <p class="text-muted text-center">
+                            <h3 class="h4 text-center mb-3 text-primary" data-trans-key="our-goal">هدفنا</h3>
+                            <p class="text-muted text-center" data-trans-key="our-goal-description">
                                 إرشاد المغتربين والمقيمين إلى جميع الفعاليات والأنشطة التي تقام في محافظة اللاذقية
                                 الجميلة،
                                 لنكون جسر التواصل بين أبناء الساحل وفعالياته المتنوعة.
@@ -84,8 +87,8 @@
                                     </svg>
                                 </div>
                             </div>
-                            <h3 class="h4 text-center mb-2 text-primary">رسالتنا</h3>
-                            <strong class="text-dark text-muted text-center d-block">"معاً لنجعل ساحلنا كالعروس الجميلة،
+                            <h3 class="h4 text-center mb-2 text-primary" data-trans-key="our-mission">رسالتنا</h3>
+                            <strong class="text-dark text-muted text-center d-block" data-trans-key="our-mission-description">"معاً لنجعل ساحلنا كالعروس الجميلة،
                                 تزدهر بأبنائها"</strong>
                         </div>
                     </div>
@@ -94,8 +97,8 @@
         </section>
         <section class="container my-5">
             <div class="text-center mb-5">
-                <h2 class="display-5 text-primary fw-bold mb-3">فريق العمل</h2>
-                <p class="lead text-muted">الأشخاص الذين يعملون بجد لجعل عروس الساحل منصة رائدة</p>
+                <h2 class="display-5 text-primary fw-bold mb-3" data-trans-key="our-team">فريق العمل</h2>
+                <p class="lead text-muted" data-trans-key="our-team-description">الأشخاص الذين يعملون بجد لجعل عروس الساحل منصة رائدة</p>
             </div>
 
             <div class="row g-2 justify-content-center">
@@ -105,7 +108,7 @@
                             <img src="./assets/images/user.png" class="card-img-top rounded-circle" alt="yhya_283516">
                         </div>
                         <div class="card-body">
-                            <h4 class="text-center">يحيى نسب</h4>
+                            <h4 class="text-center" data-trans-key="our-team-member-1">يحيى نسب</h4>
                             <h5 class="card-title text-center">yhya_283516</h5>
                         </div>
                     </div>
@@ -116,7 +119,7 @@
                             <img src="./assets/images/user.png" class="card-img-top rounded-circle" alt="nayf_299019">
                         </div>
                         <div class="card-body">
-                            <h4 class="text-center">نايف أحمد غزلان</h4>
+                            <h4 class="text-center" data-trans-key="our-team-member-2">نايف أحمد غزلان</h4>
                             <h5 class="card-title text-center">nayf_299019</h5>
                         </div>
                     </div>
@@ -127,7 +130,7 @@
                             <img src="./assets/images/user.png" class="card-img-top rounded-circle" alt="taimaa_286691">
                         </div>
                         <div class="card-body">
-                            <h4 class="text-center">تيماء أبو حسون</h4>
+                            <h4 class="text-center" data-trans-key="our-team-member-3">تيماء أبو حسون</h4>
                             <h5 class="card-title text-center">taimaa_286691</h5>
                         </div>
                     </div>
@@ -138,7 +141,7 @@
                             <img src="./assets/images/user.png" class="card-img-top rounded-circle" alt="ward_285140">
                         </div>
                         <div class="card-body">
-                            <h4 class="text-center">ورد ايمن رعوان</h4>
+                            <h4 class="text-center" data-trans-key="our-team-member-4">ورد ايمن رعوان</h4>
                             <h5 class="card-title text-center">ward_285140</h5>
                         </div>
                     </div>
@@ -149,7 +152,7 @@
                             <img src="./assets/images/user.png" class="card-img-top rounded-circle" alt="sham_283701">
                         </div>
                         <div class="card-body">
-                            <h4 class="text-center">شام نعيم</h4>
+                            <h4 class="text-center" data-trans-key="our-team-member-5">شام نعيم</h4>
                             <h5 class="card-title text-center">sham_283701</h5>
                         </div>
                     </div>
@@ -157,16 +160,16 @@
             </div>
         </section>
         <section id="policies" class="container my-5 padding-for-mobile">
-            <h2 class="text-center mb-4 text-primary fw-bold">السياسات والشروط</h2>
+            <h2 data-trans-key="privacy-terms" class="text-center mb-4 text-primary fw-bold">السياسات والشروط</h2>
             <div class="row g-4">
                 <div class="col-md-6">
                     <div class="card h-100">
                         <div class="card-body p-4">
-                            <h4 class="text-primary mb-3">سياسة الخصوصية</h4>
-                            <p class="mb-3">نحن نحترم خصوصيتك ونحمي معلوماتك الشخصية بأعلى معايير الأمان.</p>
-                            <p class="mb-3">لا نشارك معلوماتك مع أطراف ثالثة دون موافقتك الصريحة.</p>
-                            <p class="mb-3">نستخدم المعلومات فقط لتحسين خدماتنا وتقديم محتوى مناسب لك.</p>
-                            <p class="mb-0">يمكنك طلب حذف أو تعديل معلوماتك في أي وقت عبر التواصل معنا.</p>
+                            <h4 class="text-primary mb-3" data-trans-key="privacy-for-privacy">سياسة الخصوصية</h4>
+                            <p class="mb-3" data-trans-key="privacy-for-privacy-1">نحن نحترم خصوصيتك ونحمي معلوماتك الشخصية بأعلى معايير الأمان.</p>
+                            <p class="mb-3" data-trans-key="privacy-for-privacy-2">لا نشارك معلوماتك مع أطراف ثالثة دون موافقتك الصريحة.</p>
+                            <p class="mb-3" data-trans-key="privacy-for-privacy-3">نستخدم المعلومات فقط لتحسين خدماتنا وتقديم محتوى مناسب لك.</p>
+                            <p class="mb-0" data-trans-key="privacy-for-privacy-4">يمكنك طلب حذف أو تعديل معلوماتك في أي وقت عبر التواصل معنا.</p>
                         </div>
                     </div>
                 </div>
@@ -174,12 +177,12 @@
                 <div class="col-md-6">
                     <div class="card h-100">
                         <div class="card-body p-4">
-                            <h4 class="text-primary mb-3">سياسة النشر</h4>
-                            <p class="mb-3">جميع الفعاليات المنشورة تخضع لموافقة المجتمع المحلي والجهات المختصة.</p>
-                            <p class="mb-3">نحصل على الموافقات اللازمة من منظمي الفعاليات قبل النشر على الموقع.</p>
-                            <p class="mb-3">نلتزم بنشر محتوى يتماشى مع القيم والتقاليد المجتمعية السورية.</p>
-                            <p class="mb-3">نحتفظ بحق رفض أو حذف أي محتوى لا يتوافق مع معايير النشر لدينا.</p>
-                            <p class="mb-0">للإبلاغ عن أي مخالفة أو استفسار، يرجى التواصل معنا مباشرة.</p>
+                            <h4 class="text-primary mb-3" data-trans-key="privacy-for-publish">سياسة النشر</h4>
+                            <p class="mb-3" data-trans-key="privacy-for-privacy-1">جميع الفعاليات المنشورة تخضع لموافقة المجتمع المحلي والجهات المختصة.</p>
+                            <p class="mb-3" data-trans-key="privacy-for-privacy-2">نحصل على الموافقات اللازمة من منظمي الفعاليات قبل النشر على الموقع.</p>
+                            <p class="mb-3" data-trans-key="privacy-for-privacy-3">نلتزم بنشر محتوى يتماشى مع القيم والتقاليد المجتمعية السورية.</p>
+                            <p class="mb-3" data-trans-key="privacy-for-privacy-4">نحتفظ بحق رفض أو حذف أي محتوى لا يتوافق مع معايير النشر لدينا.</p>
+                            <p class="mb-0" data-trans-key="privacy-for-privacy-5">للإبلاغ عن أي مخالفة أو استفسار، يرجى التواصل معنا مباشرة.</p>
                         </div>
                     </div>
                 </div>
@@ -190,20 +193,25 @@
     <footer class="bg-body-tertiary py-2">
         <div class="container mx-auto row p-4">
             <div class="col-12 col-md-6 px-md-4">
-                <h4 class="fw-medium border-bottom border-primary">عروس الساحل</h4>
-                <p class="text-muted">عروس الساحل هي موقع يهتم بالفعاليات المختلفة في المدينة</p>
+                <h4 data-trans-key="title" class="fw-medium border-bottom border-primary">عروس الساحل</h4>
+                <p data-trans-key="footer-description" class="text-muted">عروس الساحل هي موقع يهتم بالفعاليات المختلفة
+                    في المدينة</p>
             </div>
             <div class="col-12 col-md-3 px-md-4">
-                <h4 class="fw-medium border-bottom border-primary">الفعاليات</h4>
+                <h4 data-trans-key="events" class="fw-medium border-bottom border-primary">الفعاليات</h4>
                 <nav class="d-flex flex-column gap-2">
-                    <a href="./event.html" class="link w-fit">حفل اطلاق الهوية البصرية في اللاذقية</a>
-                    <a href="./event.html" class="link w-fit">مهرجان سوق التسوق في مدينة جبلة</a>
-                    <a href="./event.html" class="link w-fit">افتتاح معرض "العودة إلى المدرسة</a>
-                    <a href="./event.html" class="link w-fit">افتتاح معرض للحرف اليدوية</a>
+                    <a data-trans-key="event-title-1" href="./event.html" class="link w-fit">حفل اطلاق الهوية البصرية في
+                        اللاذقية</a>
+                    <a data-trans-key="event-title-2" href="./event.html" class="link w-fit">مهرجان سوق التسوق في مدينة
+                        جبلة</a>
+                    <a data-trans-key="event-title-3" href="./event.html" class="link w-fit">افتتاح معرض "العودة إلى
+                        المدرسة</a>
+                    <a data-trans-key="event-title-4" href="./event.html" class="link w-fit">افتتاح معرض للحرف
+                        اليدوية</a>
                 </nav>
             </div>
             <div class="col-12 col-md-3 px-md-4">
-                <h4 class="fw-medium border-bottom border-primary">تابعنا</h4>
+                <h4 data-trans-key="follow-us" class="fw-medium border-bottom border-primary">تابعنا</h4>
                 <nav class="d-flex flex-row flex-wrap gap-2">
                     <a href="#" class="text-decoration-none text-dark">
                         <svg width="26" height="26" class="hover-svg" viewBox="0 0 24 24">
@@ -222,7 +230,7 @@
         </div>
         <hr class="border-primary">
         <div class="container mx-auto text-center">
-            <p class="text-muted">جميع الحقوق محفوظة لعروس الساحل © 2025</p>
+            <p data-trans-key="copyright" class="text-muted">جميع الحقوق محفوظة لعروس الساحل © 2025</p>
         </div>
     </footer>
     
@@ -235,6 +243,113 @@
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/main.js"></script>
+    <script>
+        const translations = {
+            "ar": {
+                "title_of_page": "دليل الموقع",
+                "title": "عروس الساحل",
+                "home": "الرئيسية",
+                "events": "الفعاليات",
+                "about": "دليل الموقع",
+                "contact": "تواصل معنا",
+                "about-coast-bride":"عن عروس الساحل",
+                "guided-description":"دليلك الشامل للفعاليات في محافظة اللاذقية",
+                "our-goal":"هدفنا",
+                "our-goal-description":"إرشاد المغتربين والمقيمين إلى جميع الفعاليات والأنشطة التي تقام في محافظة اللاذقية\nالجميلة،\nلنكون جسر التواصل بين أبنائنا الساحل وفعالياته المتنوعة.",
+                "our-mission":"رسالتنا",
+                "our-mission-description":"معاً لنجعل ساحلنا كالعروس الجميلة،\nتزدهر بأبنائها",
+                "our-team":"فريق العمل",
+                "our-team-description":"الأشخاص الذين يعملون بجد لجعل عروس الساحل منصة رائدة",
+                "our-team-member-1":"يحيى نسب",
+                "our-team-member-2":"نايف أحمد غزلان",
+                "our-team-member-3":"تيماء أبو حسون",
+                "our-team-member-4":"ورد ايمن رعوان",
+                "our-team-member-5":"شام نعيم",
+                "privacy-terms":"السياسات والشروط",
+                "privacy-for-publish":"سياسة النشر",
+                "privacy-for-publish-1":"جميع الفعاليات المنشورة تخضع لموافقة المجتمع المحلي والجهات المختصة.",
+                "privacy-for-publish-2":"نحصل على الموافقات اللازمة من منظمي الفعاليات قبل النشر على الموقع.",
+                "privacy-for-publish-3":"نلتزم بنشر محتوى يتماشى مع القيم والتقاليد المجتمعية السورية.",
+                "privacy-for-publish-4":"نحتفظ بحق رفض أو حذف أي محتوى لا يتوافق مع معايير النشر لدينا.",
+                "privacy-for-publish-5":"للإبلاغ عن أي مخالفة أو استفسار، يرجى التواصل معنا مباشرة.",
+                "privacy-for-privacy":"سياسة الخصوصية",
+                "privacy-for-privacy-1":"نحن نحترم خصوصيتك ونحمي معلوماتك الشخصية بأعلى معايير الأمان.",
+                "privacy-for-privacy-2":"لا نشارك معلوماتك مع أطراف ثالثة دون موافقتك الصريحة.",
+                "privacy-for-privacy-3":"نستخدم المعلومات فقط لتحسين خدماتنا وتقديم محتوى مناسب لك.",
+                "privacy-for-privacy-4":"يمكنك طلب حذف أو تعديل معلوماتك في أي وقت عبر التواصل معنا.",
+                "footer-description":"عروس الساحل هي موقع يهتم بالفعاليات المختلفة في المدينة",
+                "follow-us":"تابعنا",
+                "copy-right":"جميع الحقوق محفوظة لعروس الساحل © 2025",
+                "event-title-1": "حفل اطلاق الهوية البصرية في اللاذقية",
+                "event-title-2": "مهرجان سوق التسوق في مدينة جبلة",
+                "event-title-3": "افتتاح معرض \"العودة إلى المدرسة\"",
+                "event-title-4": "افتتاح معرض للحرف اليدوية",
+            },
+            "en": {
+                "title_of_page": "Site Guide",
+                "title": "Coast Bride",
+                "home": "Home",
+                "events": "Events",
+                "about": "Site Guide",
+                "contact": "Contact Us",
+                "about-coast-bride": "About Bride of the Coast",
+                "guided-description": "Your comprehensive guide to events in Latakia Governorate",
+                "our-goal": "Our Goal",
+                "our-goal-description": "To guide expatriates and residents to all events and activities held in the beautiful Latakia Governorate, to be a bridge of communication between our coastal people and its diverse events.",
+                "our-mission": "Our Mission",
+                "our-mission-description": "Together to make our coast like a beautiful bride, flourishing with its people",
+                "our-team": "Our Team",
+                "our-team-description": "The people who work hard to make Bride of the Coast a leading platform",
+                "our-team-member-1": "Yhya Nesb",
+                "our-team-member-2": "Nayef Ahmed Ghazlan",
+                "our-team-member-3": "Taima Abu Hassoun",
+                "our-team-member-4": "Ward Ayman Rawwan",
+                "our-team-member-5": "Sham Naim",
+                "privacy-terms": "Policies and Terms",
+                "privacy-for-publish": "Publishing Policy",
+                "privacy-for-publish-1": "All published events are subject to the approval of the local community and relevant authorities.",
+                "privacy-for-publish-2": "We obtain the necessary approvals from event organizers before publishing on the site.",
+                "privacy-for-publish-3": "We are committed to publishing content that aligns with Syrian societal values and traditions.",
+                "privacy-for-publish-4": "We reserve the right to refuse or delete any content that does not comply with our publishing standards.",
+                "privacy-for-publish-5": "To report any violation or inquiry, please contact us directly.",
+                "privacy-for-privacy": "Privacy Policy",
+                "privacy-for-privacy-1": "We respect your privacy and protect your personal information with the highest security standards.",
+                "privacy-for-privacy-2": "We do not share your information with third parties without your explicit consent.",
+                "privacy-for-privacy-3": "We only use information to improve our services and provide suitable content for you.",
+                "privacy-for-privacy-4": "You can request to delete or modify your information at any time by contacting us.",
+                "footer-description": "Bride of the Coast is a website dedicated to various events in the city",
+                "follow-us": "Follow Us",
+                "copy-right": "All rights reserved to Bride of the Coast © 2025",
+                "event-title-1": "Visual Identity Launch Ceremony in Latakia",
+                "event-title-2": "Shopping Market Festival in Jableh City",
+                "event-title-3": "Opening of the \"Back to School\" Exhibition",
+                "event-title-4": "Opening of a Handicrafts Exhibition"
+            }
+        };
+        document.addEventListener("DOMContentLoaded", () => {
+            const language = localStorage.getItem("language") || "ar";
+            const html = document.documentElement;
+            html.setAttribute("lang", language);
+            html.setAttribute("dir", language === "ar" ? "rtl" : "ltr");
+            document.title = translations[language].title_of_page;
+            document.querySelectorAll("[data-trans-key]").forEach(element => {
+                element.textContent = translations[language][element.getAttribute("data-trans-key")];
+                if (element.tagName === "OPTION") {
+                    element.value = translations[language][element.getAttribute("data-trans-key")];
+                }
+            });
+            document.querySelectorAll("[data-trans-key-placeholder]").forEach(element => {
+                element.placeholder = translations[language][element.getAttribute("data-trans-key-placeholder")];
+            });
+            document.getElementById("language-flag").src = `./assets/images/flag_${language === "ar" ? "USA" : "SYR"}.svg`;
+        });
+        function changeLanguage() {
+            const language = localStorage.getItem("language") || "ar";
+            localStorage.setItem("language", language === "ar" ? "en" : "ar");
+            window.location.reload();
+        }
+
+    </script>
 </body>
 
 </html>

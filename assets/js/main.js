@@ -78,7 +78,8 @@ document.addEventListener("DOMContentLoaded", function () {
 				filterCategories.setAttribute("data-filter-query", query);
 				filterCategories.setAttribute("data-filter-date", date);
 				filterCategories.setAttribute("data-filter-city", city);
-				if (query.length > 0 || date.length > 0 || city.length > 0) {
+				console.log(city)
+				if (query.length > 0 || date.length > 0 || (city.length > 0 && !["بدون", "without"].includes(city))) {
 					filterCategories.setAttribute("data-current-type", "custom");
 				} else {
 					filterCategories.setAttribute("data-current-type", "all");
@@ -88,6 +89,21 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 		filterCategoriesLogic();
 	}
+	const translations = {
+		"ar":{
+			"fill-all-fields":"الرجاء تعبئة كامل الحقول",
+			"invalid-email":"البريد الإلكتروني غير صالح",
+			"done-send-event":"تم تقديم الفعالية بنجاح",
+			"done-send-message":"تم إرسال الرسالة بنجاح",
+		},
+		"en":{
+			"fill-all-fields":"Please fill in all fields",
+			"invalid-email":"Invalid email",
+			"done-send-event":"Event submitted successfully",
+			"done-send-message":"Message sent successfully",
+		}
+	};
+	const currentLang = window.localStorage.getItem("language") || "ar";
 	// in event page
 	const suggestEvent = document.getElementById("suggest-event");
 	if (suggestEvent) {
@@ -114,18 +130,18 @@ document.addEventListener("DOMContentLoaded", function () {
 				if (city.length === 0) {
 					document.getElementById("suggest-city").classList.add("is-invalid");
 				}
-				appendAlert("error", "الرجاء تعبئة كامل الحقول");
+				appendAlert("error", translations[currentLang]["fill-all-fields"]);
 				return;
 			}
 			if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-				appendAlert("error", "البريد الإلكتروني غير صالح");
+				appendAlert("error", translations[currentLang]["invalid-email"]);
 				return;
 			}
 			suggestEvent.querySelectorAll("input, textarea").forEach((el) => {
 				el.value = "";
 				el.classList.remove("is-invalid");
 			});
-			appendAlert("success", "تم تقديم الفعالية بنجاح");
+			appendAlert("success", translations[currentLang]["done-send-event"]);
 		});
 	}
 	// in about page
@@ -150,18 +166,18 @@ document.addEventListener("DOMContentLoaded", function () {
 				if (message.length === 0) {
 					document.getElementById("message").classList.add("is-invalid");
 				}
-				appendAlert("error", "الرجاء تعبئة كامل الحقول");
+				appendAlert("error", translations[currentLang]["fill-all-fields"]);
 				return;
 			}
 			if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-				appendAlert("error", "البريد الإلكتروني غير صالح");
+				appendAlert("error", translations[currentLang]["invalid-email"]);
 				return;
 			}
 			contactForm.querySelectorAll("input, textarea").forEach((el) => {
 				el.value = "";
 				el.classList.remove("is-invalid");
 			});
-			appendAlert("success", "تم إرسال الرسالة بنجاح");
+			appendAlert("success", translations[currentLang]["done-send-message"]);
 		});
 	}
 	

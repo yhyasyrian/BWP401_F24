@@ -14,29 +14,34 @@
     <!-- Start Header -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
-            <a class="navbar-brand text-primary fw-bold" href="./index.html">عروس الساحل</a>
+            <a data-trans-key="title" class="navbar-brand text-primary fw-bold" href="./index.html">عروس الساحل</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a data-trans-key="home" class="nav-link link" aria-current="page"
+                            href="./index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-trans-key="events" class="nav-link link" href="./events.html">الفعاليات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-trans-key="about" class="nav-link link" href="./about.html">دليل الموقع</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-trans-key="contact" class="nav-link link" href="./contact.html">تواصل معنا</a>
+                    </li>
+
+                </ul>
+            </div>
+            <div>
+                <img onclick="changeLanguage()" id="language-flag" style="width: 32px; height: 24px;"
+                    src="./assets/images/flag_USA.svg" />
+            </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link link" aria-current="page" href="./index.html">الرئيسية</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link link" href="./events.html">الفعاليات</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link link" href="./about.html">دليل الموقع</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link link" href="./contact.html">تواصل معنا</a>
-                    </li>
-
-                </ul>
-            </div>
         </div>
     </nav>
     <!-- End Header -->
@@ -45,59 +50,66 @@
         <section class="container my-4 padding-for-mobile">
             <div class="row g-4">
                 <div class="col-12 col-lg-7">
-                    <h1 class="text-primary fw-bold mb-3">حفل اطلاق الهوية البصرية في اللاذقية</h1>
-                    <p class="lead mb-4">
-                        شهدت ساحة الشيخ ضاهر في اللاذقية حدثاً تاريخياً مميزاً بإطلاق الهوية البصرية الجديدة للمدينة، 
-                        والذي جمع أهالي اللاذقية في احتفالية كبيرة عكست روح التلاحم والانتماء لهذه المدينة العريقة. 
-                        هذا الحدث الذي يُعتبر نقطة تحول في تاريخ المدينة الحديث، حيث تم الكشف عن هوية بصرية جديدة 
+                    <h1 data-trans-key="primary-event-title" class="text-primary fw-bold mb-3">حفل اطلاق الهوية البصرية
+                        في اللاذقية</h1>
+                    <p data-trans-key="primary-event-description" class="lead mb-4">
+                        شهدت ساحة الشيخ ضاهر في اللاذقية حدثاً تاريخياً مميزاً بإطلاق الهوية البصرية الجديدة للمدينة،
+                        والذي جمع أهالي اللاذقية في احتفالية كبيرة عكست روح التلاحم والانتماء لهذه المدينة العريقة.
+                        هذا الحدث الذي يُعتبر نقطة تحول في تاريخ المدينة الحديث، حيث تم الكشف عن هوية بصرية جديدة
                         تجمع بين عراقة الماضي وتطلعات المستقبل.
                     </p>
-                    <p class="mb-4">
-                        الفعالية التي نظمتها محافظة اللاذقية بالتعاون مع الجهات المختصة، شهدت مشاركة واسعة من 
-                        مختلف فئات المجتمع، من الأطفال إلى كبار السن، مما يعكس أهمية هذا الحدث بالنسبة لسكان المدينة. 
-                        تضمنت الفعالية عروضاً فنية وثقافية متنوعة، بالإضافة إلى معرض يعرض تاريخ اللاذقية وتطورها 
+                    <p data-trans-key="secondary-event-description" class="mb-4">
+                        الفعالية التي نظمتها محافظة اللاذقية بالتعاون مع الجهات المختصة، شهدت مشاركة واسعة من
+                        مختلف فئات المجتمع، من الأطفال إلى كبار السن، مما يعكس أهمية هذا الحدث بالنسبة لسكان المدينة.
+                        تضمنت الفعالية عروضاً فنية وثقافية متنوعة، بالإضافة إلى معرض يعرض تاريخ اللاذقية وتطورها
                         عبر العصور، وكيف تنعكس هذه الهوية الجديدة على مستقبل المدينة.
                     </p>
                     <div class="d-flex flex-wrap align-items-center gap-3 mb-4">
                         <div class="d-flex align-items-center">
                             <svg width="20" height="20" class="me-2" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+                                <path
+                                    d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z" />
                             </svg>
-                            <time datetime="2025-07-04" class="fw-medium">4 يوليو 2025</time>
+                            <time datetime="2025-07-04" class="fw-medium" data-trans-key="event-date">4 يوليو
+                                2025</time>
                         </div>
                         <div class="d-flex align-items-center">
                             <svg width="20" height="20" class="me-2" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                <path
+                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                             </svg>
-                            <span class="fw-medium">ساحة الشيخ ضاهر، اللاذقية</span>
+                            <span class="fw-medium" data-trans-key="event-location">ساحة الشيخ ضاهر، اللاذقية</span>
                         </div>
                     </div>
                     <div class="d-flex flex-wrap gap-2">
                         <button class="btn btn-primary" id="add-to-calendar">
                             <svg width="16" height="16" class="me-2" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+                                <path
+                                    d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z" />
                             </svg>
-                            إضافة للتقويم
+                            <span data-trans-key="add-to-calendar">
+                                إضافة للتقويم
+                            </span>
                         </button>
                         <button class="btn btn-outline-primary" id="share-event">
                             <svg width="16" height="16" class="me-2" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/>
+                                <path
+                                    d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z" />
                             </svg>
-                            مشاركة
+                            <span data-trans-key="share-event">مشاركة</span>
                         </button>
                     </div>
                 </div>
                 <div class="col-12 col-lg-5">
-                    <img src="./assets/images/location.png" 
-                             class="img-fluid rounded" 
-                             alt="حفل اطلاق الهوية البصرية في اللاذقية" />
+                    <img src="./assets/images/location.png" class="img-fluid rounded"
+                        alt="حفل اطلاق الهوية البصرية في اللاذقية" />
                 </div>
             </div>
         </section>
 
         <!-- Event Gallery Section -->
         <section class="container my-4 padding-for-mobile">
-            <h2 class="text-center mb-4 text-primary fw-bold">صور من الفعالية</h2>
+            <h2 data-trans-key="event-gallery-title" class="text-center mb-4 text-primary fw-bold">صور من الفعالية</h2>
             <div id="eventGalleryCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#eventGalleryCarousel" data-bs-slide-to="0" class="active"
@@ -142,12 +154,12 @@
                 <button class="carousel-control-prev" type="button" style="opacity: 0.8;"
                     data-bs-target="#eventGalleryCarousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">السابق</span>
+                    <span data-trans-key="previous" class="visually-hidden">السابق</span>
                 </button>
                 <button class="carousel-control-next" type="button" style="opacity: 0.8;"
                     data-bs-target="#eventGalleryCarousel" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">التالي</span>
+                    <span data-trans-key="next" class="visually-hidden">التالي</span>
                 </button>
             </div>
         </section>
@@ -156,7 +168,8 @@
 
         <!-- Suggested Events Section -->
         <section class="container my-4 padding-for-mobile">
-            <h2 class="text-center mb-4 fw-bold text-primary">فعاليات مقترحة</h2>
+            <h2 data-trans-key="suggested-events-title" class="text-center mb-4 fw-bold text-primary">فعاليات مقترحة
+            </h2>
             <div class="row mt-4 row-gap-3">
                 <div class="col-12 col-md-6 col-lg-4 col-xxl-3">
                     <div class="card h-full">
@@ -165,16 +178,20 @@
                                 alt="مهرجان سوق التسوق في مدينة جبلة">
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">مهرجان سوق التسوق في مدينة جبلة</h5>
-                            <p class="card-text">بمشاركة كريمة من السيد محمد عثمان محافظ اللاذقية، وقائد الأمن الداخلي
+                            <h5 data-trans-key="suggested-event-title-1" class="card-title">مهرجان سوق التسوق في مدينة
+                                جبلة</h5>
+                            <p data-trans-key="suggested-event-description-1" class="card-text">بمشاركة كريمة من السيد
+                                محمد عثمان محافظ اللاذقية، وقائد الأمن الداخلي
                                 للمحافظة والحضور الكرام تم اليوم افتتاح مهرجان سوق التسوق في مدينة جبلة.</p>
                             <div class="d-flex flex-wrap flex-row gap-1">
                                 <time class="d-block mb-2" datetime="2025-09-14">2025-09-14</time>
                                 <span> - </span>
-                                <span class="d-block location mb-2">جبلة</span>
+                                <span class="d-block location mb-2"
+                                    data-trans-key="suggested-event-location-1">جبلة</span>
                             </div>
                             <div class="d-flex flex-column h-full justify-content-end">
-                                <a href="./event.html" class="btn btn-primary">تفاصيل الفعالية</a>
+                                <a href="./event.html" class="btn btn-primary" data-trans-key="event-details">تفاصيل
+                                    الفعالية</a>
                             </div>
                         </div>
                     </div>
@@ -186,17 +203,21 @@
                                 alt="افتتاح معرض العودة إلى المدرسة">
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">افتتاح معرض "العودة إلى المدرسة"</h5>
-                            <p class="card-text">تحت رعاية وزارة الاقتصاد والصناعة ومحافظة اللاذقية، وبمناسبة اقتراب
+                            <h5 data-trans-key="suggested-event-title-2" class="card-title">افتتاح معرض "العودة إلى
+                                المدرسة"</h5>
+                            <p data-trans-key="suggested-event-description-2" class="card-text">تحت رعاية وزارة الاقتصاد
+                                والصناعة ومحافظة اللاذقية، وبمناسبة اقتراب
                                 العام الدراسي الجديد، افتتح معرض "العودة إلى المدرسة" والذي يضم تشكيلة واسعة من
                                 المستلزمات المدرسية بأسعار مخفضة</p>
                             <div class="d-flex flex-wrap flex-row gap-1">
                                 <time class="d-block mb-2" datetime="2025-09-16">2025-09-16</time>
                                 <span> - </span>
-                                <span class="d-block location mb-2">اللاذقية</span>
+                                <span class="d-block location mb-2"
+                                    data-trans-key="suggested-event-location-2">اللاذقية</span>
                             </div>
                             <div class="d-flex flex-column h-full justify-content-end">
-                                <a href="./event.html" class="btn btn-primary">تفاصيل الفعالية</a>
+                                <a href="./event.html" class="btn btn-primary" data-trans-key="event-details">تفاصيل
+                                    الفعالية</a>
                             </div>
                         </div>
                     </div>
@@ -208,16 +229,20 @@
                                 alt="افتاح معرض للحرف اليدوية">
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">افتتاح معرض للحرف اليدوية</h5>
-                            <p class="card-text">بحضور محافظ اللاذقية السيد محمد عثمان، افتُتح اليوم معرض للحرف اليدوية
+                            <h5 data-trans-key="suggested-event-title-3" class="card-title">افتتاح معرض للحرف اليدوية
+                            </h5>
+                            <p data-trans-key="suggested-event-description-3" class="card-text">بحضور محافظ اللاذقية
+                                السيد محمد عثمان، افتُتح اليوم معرض للحرف اليدوية
                                 والتقليدية في مدينة كسب، بمشاركة عدد من الحرفيين من مختلف مناطق المحافظة</p>
                             <div class="d-flex flex-wrap flex-row gap-1">
                                 <time class="d-block mb-2" datetime="2025-07-28">2025-07-28</time>
                                 <span> - </span>
-                                <span class="d-block location mb-2">كسب</span>
+                                <span class="d-block location mb-2"
+                                    data-trans-key="suggested-event-location-3">كسب</span>
                             </div>
                             <div class="d-flex flex-column h-full justify-content-end">
-                                <a href="./event.html" class="btn btn-primary">تفاصيل الفعالية</a>
+                                <a href="./event.html" class="btn btn-primary" data-trans-key="event-details">تفاصيل
+                                    الفعالية</a>
                             </div>
                         </div>
                     </div>
@@ -227,24 +252,29 @@
 
         <div id="alerts" class="container my-4 mx-auto padding-for-mobile fixed-top"></div>
     </main>
-    
+
     <footer class="bg-body-tertiary py-2">
         <div class="container mx-auto row p-4">
             <div class="col-12 col-md-6 px-md-4">
-                <h4 class="fw-medium border-bottom border-primary">عروس الساحل</h4>
-                <p class="text-muted">عروس الساحل هي موقع يهتم بالفعاليات المختلفة في المدينة</p>
+                <h4 data-trans-key="title" class="fw-medium border-bottom border-primary">عروس الساحل</h4>
+                <p data-trans-key="footer-description" class="text-muted">عروس الساحل هي موقع يهتم بالفعاليات المختلفة
+                    في المدينة</p>
             </div>
             <div class="col-12 col-md-3 px-md-4">
-                <h4 class="fw-medium border-bottom border-primary">الفعاليات</h4>
+                <h4 data-trans-key="events" class="fw-medium border-bottom border-primary">الفعاليات</h4>
                 <nav class="d-flex flex-column gap-2">
-                    <a href="./event.html" class="link w-fit">حفل اطلاق الهوية البصرية في اللاذقية</a>
-                    <a href="./event.html" class="link w-fit">مهرجان سوق التسوق في مدينة جبلة</a>
-                    <a href="./event.html" class="link w-fit">افتتاح معرض "العودة إلى المدرسة</a>
-                    <a href="./event.html" class="link w-fit">افتتاح معرض للحرف اليدوية</a>
+                    <a data-trans-key="event-title-1" href="./event.html" class="link w-fit">حفل اطلاق الهوية البصرية في
+                        اللاذقية</a>
+                    <a data-trans-key="event-title-2" href="./event.html" class="link w-fit">مهرجان سوق التسوق في مدينة
+                        جبلة</a>
+                    <a data-trans-key="event-title-3" href="./event.html" class="link w-fit">افتتاح معرض "العودة إلى
+                        المدرسة</a>
+                    <a data-trans-key="event-title-4" href="./event.html" class="link w-fit">افتتاح معرض للحرف
+                        اليدوية</a>
                 </nav>
             </div>
             <div class="col-12 col-md-3 px-md-4">
-                <h4 class="fw-medium border-bottom border-primary">تابعنا</h4>
+                <h4 data-trans-key="follow-us" class="fw-medium border-bottom border-primary">تابعنا</h4>
                 <nav class="d-flex flex-row flex-wrap gap-2">
                     <a href="#" class="text-decoration-none text-dark">
                         <svg width="26" height="26" class="hover-svg" viewBox="0 0 24 24">
@@ -263,19 +293,118 @@
         </div>
         <hr class="border-primary">
         <div class="container mx-auto text-center">
-            <p class="text-muted">جميع الحقوق محفوظة لعروس الساحل © 2025</p>
+            <p data-trans-key="copyright" class="text-muted">جميع الحقوق محفوظة لعروس الساحل © 2025</p>
         </div>
     </footer>
-    
+
     <!-- Scroll to Top Button -->
     <button id="scroll-to-top" title="العودة إلى الأعلى">
         <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" />
         </svg>
     </button>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/main.js"></script>
+    <script>
+        const translations = {
+            "ar": {
+                "title_of_page": "حفل اطلاق الهوية البصرية في اللاذقية",
+                "title": "عروس الساحل",
+                "home": "الرئيسية",
+                "events": "الفعاليات",
+                "about": "دليل الموقع",
+                "contact": "تواصل معنا",
+                "primary-event-title": "حفل اطلاق الهوية البصرية في اللاذقية",
+                "primary-event-description": "شهدت ساحة الشيخ ضاهر في اللاذقية حدثاً تاريخياً مميزاً بإطلاق الهوية البصرية الجديدة للمدينة، والذي جمع أهالي اللاذقية في احتفالية كبيرة عكست روح التلاحم والانتماء لهذه المدينة العريقة. هذا الحدث الذي يُعتبر نقطة تحول في تاريخ المدينة الحديث، حيث تم الكشف عن هوية بصرية جديدة تجمع بين عراقة الماضي وتطلعات المستقبل.",
+                "secondary-event-description": "الفعالية التي نظمتها محافظة اللاذقية بالتعاون مع الجهات المختصة، شهدت مشاركة واسعة من أهالي المدينة في هذا الحدث المميز، حيث تم الكشف عن هوية بصرية جديدة تجمع بين عراقة الماضي وتطلعات المستقبل. كما تم التعاون مع الجهات المختصة لتنفيذ هذا الحدث الذي جمع أهالي المدينة في احتفالية كبيرة عكست روح التلاحم والانتماء لهذه المدينة العريقة.",
+                "event-date": "4 يوليو 2025",
+                "event-location": "ساحة الشيخ ضاهر، اللاذقية",
+                "add-to-calendar": "إضافة للتقويم",
+                "share-event": "مشاركة",
+                "event-gallery-title": "صور من الفعالية",
+                "suggested-events-title": "فعاليات مقترحة",
+                "suggested-event-title-1": "مهرجان سوق التسوق في مدينة جبلة",
+                "suggested-event-description-1": "بمشاركة كريمة من السيد محمد عثمان محافظ اللاذقية، وقائد الأمن الداخلي للمحافظة والحضور الكرام تم اليوم افتتاح مهرجان سوق التسوق في مدينة جبلة.",
+                "suggested-event-location-1": "جبلة",
+                "suggested-event-title-2": "افتتاح معرض \"العودة إلى المدرسة\"",
+                "suggested-event-description-2": "تحت رعاية وزارة الاقتصاد والصناعة ومحافظة اللاذقية، وبمناسبة اقتراب العام الدراسي الجديد، افتتح معرض \"العودة إلى المدرسة\" والذي يضم تشكيلة واسعة من المستلزمات المدرسية بأسعار مخفضة",
+                "suggested-event-location-2": "اللاذقية",
+                "suggested-event-title-3": "افتتاح معرض للحرف اليدوية",
+                "suggested-event-description-3": "بحضور محافظ اللاذقية السيد محمد عثمان، افتُتح اليوم معرض للحرف اليدوية\nوالتقليدية في مدينة كسب، بمشاركة عدد من الحرفيين من مختلف مناطق المحافظة",
+                "suggested-event-location-3": "كسب",
+                "footer-description": "عروس الساحل هي موقع يهتم بالفعاليات المختلفة في المدينة",
+                "follow-us": "تابعنا",
+                "copyright": "جميع الحقوق محفوظة لعروس الساحل © 2025",
+                "event-details": "تفاصيل الفعالية",
+                "previous": "السابق",
+                "next": "التالي",
+                "event-title-1": "حفل اطلاق الهوية البصرية في اللاذقية",
+                "event-title-2": "مهرجان سوق التسوق في مدينة جبلة",
+                "event-title-3": "افتتاح معرض \"العودة إلى المدرسة\"",
+                "event-title-4": "افتتاح معرض للحرف اليدوية",
+            },
+            "en": {
+                "title_of_page": "Visual Identity Launch Ceremony in Latakia",
+                "title": "Coast Bride",
+                "home": "Home",
+                "events": "Events",
+                "about": "Site Guide",
+                "contact": "Contact Us",
+                "primary-event-title": "Visual Identity Launch Ceremony in Latakia",
+                "primary-event-description": "Sheikh Daher Square in Latakia witnessed a special historical event with the launch of the city's new visual identity, which brought together the people of Latakia in a large celebration that reflected the spirit of cohesion and belonging to this ancient city. This event is considered a turning point in the city's modern history, as a new visual identity was unveiled that combines the authenticity of the past and the aspirations of the future.",
+                "secondary-event-description": "The event, organized by the Latakia Governorate in cooperation with relevant authorities, witnessed wide participation from the city's residents. A new visual identity was unveiled that combines the authenticity of the past and the aspirations of the future. Cooperation was also established with relevant authorities to implement this event, which brought together the city's residents in a large celebration that reflected the spirit of cohesion and belonging to this ancient city.",
+                "event-date": "July 4, 2025",
+                "event-location": "Sheikh Daher Square, Latakia",
+                "add-to-calendar": "Add to Calendar",
+                "share-event": "Share",
+                "event-gallery-title": "Photos from the Event",
+                "suggested-events-title": "Suggested Events",
+                "suggested-event-title-1": "Shopping Market Festival in Jableh City",
+                "suggested-event-description-1": "With the gracious participation of Mr. Mohammed Othman, Governor of Latakia, the commander of internal security for the governorate, and distinguished guests, the Shopping Market Festival was inaugurated today in Jableh City.",
+                "suggested-event-location-1": "Jableh",
+                "suggested-event-title-2": "Opening of the \"Back to School\" Exhibition",
+                "suggested-event-description-2": "Under the patronage of the Ministry of Economy and Industry and Latakia Governorate, and on the occasion of the approaching new academic year, the \"Back to School\" exhibition was inaugurated, featuring a wide range of school supplies at discounted prices.",
+                "suggested-event-location-2": "Latakia",
+                "suggested-event-title-3": "Opening of a Handicrafts Exhibition",
+                "suggested-event-description-3": "In the presence of Latakia Governor Mr. Mohammed Othman, a handicrafts and traditional crafts exhibition was opened today in the city of Kassab, with the participation of a number of artisans from various regions of the governorate.",
+                "suggested-event-location-3": "Kassab",
+                "footer-description": "Coast Bride is a website dedicated to various events in the city.",
+                "follow-us": "Follow Us",
+                "copyright": "All rights reserved to Coast Bride © 2025",
+                "event-details": "Event Details",
+                "previous": "Previous",
+                "next": "Next",
+                "event-title-1": "Visual Identity Launch Ceremony in Latakia",
+                "event-title-2": "Shopping Market Festival in Jableh City",
+                "event-title-3": "Opening of the \"Back to School\" Exhibition",
+                "event-title-4": "Opening of a Handicrafts Exhibition",
+            }
+        };
+        document.addEventListener("DOMContentLoaded", () => {
+            const language = localStorage.getItem("language") || "ar";
+            const html = document.documentElement;
+            html.setAttribute("lang", language);
+            html.setAttribute("dir", language === "ar" ? "rtl" : "ltr");
+            document.title = translations[language].title_of_page;
+            document.querySelectorAll("[data-trans-key]").forEach(element => {
+                element.textContent = translations[language][element.getAttribute("data-trans-key")];
+                if (element.tagName === "OPTION") {
+                    element.value = translations[language][element.getAttribute("data-trans-key")];
+                }
+            });
+            document.querySelectorAll("[data-trans-key-placeholder]").forEach(element => {
+                element.placeholder = translations[language][element.getAttribute("data-trans-key-placeholder")];
+            });
+            document.getElementById("language-flag").src = `./assets/images/flag_${language === "ar" ? "USA" : "SYR"}.svg`;
+        });
+        function changeLanguage() {
+            const language = localStorage.getItem("language") || "ar";
+            localStorage.setItem("language", language === "ar" ? "en" : "ar");
+            window.location.reload();
+        }
+
+    </script>
 </body>
 
 </html>

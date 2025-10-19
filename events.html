@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الفعاليات</title>
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.rtl.min.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.rtl.min.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
@@ -14,35 +13,39 @@
     <!-- Start Header -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
-            <a class="navbar-brand text-primary fw-bold" href="./index.html">عروس الساحل</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <a data-trans-key="title" class="navbar-brand text-primary fw-bold" href="./index.html">عروس الساحل</a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link link" aria-current="page" href="./index.html">الرئيسية</a>
+                        <a data-trans-key="home" class="nav-link link" aria-current="page"
+                            href="./index.html">الرئيسية</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link active" href="./events.html">الفعاليات</a>
+                        <a data-trans-key="events" class="nav-link link active" href="./events.html">الفعاليات</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link" href="./about.html">دليل الموقع</a>
+                        <a data-trans-key="about" class="nav-link link" href="./about.html">دليل الموقع</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link" href="./contact.html">تواصل معنا</a>
+                        <a data-trans-key="contact" class="nav-link link" href="./contact.html">تواصل معنا</a>
                     </li>
-
                 </ul>
+                <div>
+                    <img onclick="changeLanguage()" id="language-flag" style="width: 32px; height: 24px;"
+                        src="./assets/images/flag_USA.svg" />
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
             </div>
         </div>
     </nav>
     <!-- End Header -->
     <main>
         <section class="container my-4 padding-for-mobile">
-            <h2 class="text-center mb-4 text-primary fw-bold">فعالية الاسبوع</h2>
+            <h2 data-trans-key="event-of-the-week" class="text-center mb-4 text-primary fw-bold">فعالية الاسبوع</h2>
             <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="active"
@@ -87,25 +90,28 @@
                 <button class="carousel-control-prev" type="button" style="opacity: 0.8;"
                     data-bs-target="#galleryCarousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">السابق</span>
+                    <span data-trans-key="previous" class="visually-hidden">السابق</span>
                 </button>
                 <button class="carousel-control-next" type="button" style="opacity: 0.8;"
                     data-bs-target="#galleryCarousel" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">التالي</span>
+                    <span data-trans-key="next" class="visually-hidden">التالي</span>
                 </button>
             </div>
         </section>
         <section class="container my-4 padding-for-mobile filter-categories" data-filter-query="" data-filter-date=""
             data-current-type="all">
-            <h2 class="text-center mb-4 fw-bold text-primary">الفعاليات</h2>
+            <h2 data-trans-key="events" class="text-center mb-4 fw-bold text-primary">الفعاليات</h2>
             <div class="d-flex flex-wrap gap-2 justify-content-center">
-                <button class="btn btn-outline-primary" data-type="all">جميع الأقسام</button>
-                <button class="btn btn-outline-primary" data-type="celebration">احتفالات</button>
-                <button class="btn btn-outline-primary" data-type="festival">مهرجانات</button>
-                <button class="btn btn-outline-primary" data-type="exhibition">معارض</button>
-                <button type="button" class="btn btn-outline-primary" data-type="custom" data-bs-toggle="modal"
-                    data-bs-target="#filter-custom">
+                <button data-trans-key="all-categories" class="btn btn-outline-primary" data-type="all">جميع
+                    الأقسام</button>
+                <button data-trans-key="celebration" class="btn btn-outline-primary"
+                    data-type="celebration">احتفالات</button>
+                <button data-trans-key="festival" class="btn btn-outline-primary" data-type="festival">مهرجانات</button>
+                <button data-trans-key="exhibition" class="btn btn-outline-primary"
+                    data-type="exhibition">معارض</button>
+                <button data-trans-key="custom-filter" type="button" class="btn btn-outline-primary" data-type="custom"
+                    data-bs-toggle="modal" data-bs-target="#filter-custom">
                     تصفية مخصصة
                 </button>
             </div>
@@ -117,16 +123,20 @@
                                 class="card-img-top" alt="حفل اطلاق الهوية البصرية في اللاذقية">
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">حفل اطلاق الهوية البصرية في اللاذقية</h5>
-                            <p class="card-text">لقطات مميزة تنقل مشهد المشاركة الواسعة لأهالي اللاذقية في فعالية الهوية
+                            <h5 data-trans-key="event-title-1" class="card-title">حفل اطلاق الهوية البصرية في اللاذقية
+                            </h5>
+                            <p data-trans-key="event-description-1" class="card-text">لقطات مميزة تنقل مشهد المشاركة
+                                الواسعة لأهالي اللاذقية في فعالية الهوية
                                 البصرية من قلب ساحة الشيخ ضاهر.</p>
                             <div class="d-flex flex-wrap flex-row gap-1">
                                 <time class="d-block mb-2" datetime="2025-07-04">2025-07-04</time>
                                 <span> - </span>
-                                <span class="d-block location mb-2">ساحة الشيخ ضاهر</span>
+                                <span data-trans-key="event-location-1" class="d-block location mb-2">ساحة الشيخ
+                                    ضاهر</span>
                             </div>
                             <div class="d-flex flex-column h-full justify-content-end">
-                                <a href="./event.html" class="btn btn-primary">تفاصيل الفعالية</a>
+                                <a href="./event.html" class="btn btn-primary" data-trans-key="event-details">تفاصيل
+                                    الفعالية</a>
                             </div>
                         </div>
                     </div>
@@ -138,16 +148,18 @@
                                 alt="مهرجان سوق التسوق في مدينة جبلة">
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">مهرجان سوق التسوق في مدينة جبلة</h5>
-                            <p class="card-text">بمشاركة كريمة من السيد محمد عثمان محافظ اللاذقية، وقائد الأمن الداخلي
+                            <h5 data-trans-key="event-title-2" class="card-title">مهرجان سوق التسوق في مدينة جبلة</h5>
+                            <p data-trans-key="event-description-2" class="card-text">بمشاركة كريمة من السيد محمد عثمان
+                                محافظ اللاذقية، وقائد الأمن الداخلي
                                 للمحافظة والحضور الكرام تم اليوم افتتاح مهرجان سوق التسوق في مدينة جبلة.</p>
                             <div class="d-flex flex-wrap flex-row gap-1">
                                 <time class="d-block mb-2" datetime="2025-09-14">2025-09-14</time>
                                 <span> - </span>
-                                <span class="d-block location mb-2">جبلة</span>
+                                <span data-trans-key="event-location-2" class="d-block location mb-2">جبلة</span>
                             </div>
                             <div class="d-flex flex-column h-full justify-content-end">
-                                <a href="./event.html" class="btn btn-primary">تفاصيل الفعالية</a>
+                                <a href="./event.html" class="btn btn-primary" data-trans-key="event-details">تفاصيل
+                                    الفعالية</a>
                             </div>
                         </div>
                     </div>
@@ -159,17 +171,19 @@
                                 alt="افتتاح معرض العودة إلى المدرسة">
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">افتتاح معرض "العودة إلى المدرسة"</h5>
-                            <p class="card-text">تحت رعاية وزارة الاقتصاد والصناعة ومحافظة اللاذقية، وبمناسبة اقتراب
+                            <h5 data-trans-key="event-title-3" class="card-title">افتتاح معرض "العودة إلى المدرسة"</h5>
+                            <p data-trans-key="event-description-3" class="card-text">تحت رعاية وزارة الاقتصاد والصناعة
+                                ومحافظة اللاذقية، وبمناسبة اقتراب
                                 العام الدراسي الجديد، افتتح معرض "العودة إلى المدرسة" والذي يضم تشكيلة واسعة من
                                 المستلزمات المدرسية بأسعار مخفضة</p>
                             <div class="d-flex flex-wrap flex-row gap-1">
                                 <time class="d-block mb-2" datetime="2025-09-16">2025-09-16</time>
                                 <span> - </span>
-                                <span class="d-block location mb-2">اللاذقية</span>
+                                <span data-trans-key="event-location-3" class="d-block location mb-2">اللاذقية</span>
                             </div>
                             <div class="d-flex flex-column h-full justify-content-end">
-                                <a href="./event.html" class="btn btn-primary">تفاصيل الفعالية</a>
+                                <a href="./event.html" class="btn btn-primary" data-trans-key="event-details">تفاصيل
+                                    الفعالية</a>
                             </div>
                         </div>
                     </div>
@@ -181,16 +195,18 @@
                                 alt="افتاح معرض للحرف اليدوية">
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">افتتاح معرض للحرف اليدوية</h5>
-                            <p class="card-text">بحضور محافظ اللاذقية السيد محمد عثمان، افتُتح اليوم معرض للحرف اليدوية
+                            <h5 data-trans-key="event-title-4" class="card-title">افتتاح معرض للحرف اليدوية</h5>
+                            <p data-trans-key="event-description-4" class="card-text">بحضور محافظ اللاذقية السيد محمد
+                                عثمان، افتُتح اليوم معرض للحرف اليدوية
                                 والتقليدية في مدينة كسب، بمشاركة عدد من الحرفيين من مختلف مناطق المحافظة</p>
                             <div class="d-flex flex-wrap flex-row gap-1">
                                 <time class="d-block mb-2" datetime="2025-07-28">2025-07-28</time>
                                 <span> - </span>
-                                <span class="d-block location mb-2">كسب</span>
+                                <span data-trans-key="event-location-4" class="d-block location mb-2">كسب</span>
                             </div>
                             <div class="d-flex flex-column h-full justify-content-end">
-                                <a href="./event.html" class="btn btn-primary">تفاصيل الفعالية</a>
+                                <a href="./event.html" class="btn btn-primary" data-trans-key="event-details">تفاصيل
+                                    الفعالية</a>
                             </div>
                         </div>
                     </div>
@@ -199,70 +215,74 @@
         </section>
         <hr>
         <section id="suggest-event" class="container my-4 padding-for-mobile">
-            <h2 class="text-center mb-4 fw-bold text-primary">اقترح فعالية</h2>
-            <p class="text-center">
+            <h2 data-trans-key="suggest-event" class="text-center mb-4 fw-bold text-primary">اقترح فعالية</h2>
+            <p data-trans-key="suggest-event-description" class="text-center">
                 هل لديك فعالية تريد اقتراحها لنا؟ تساهم في حل مشكلة أو تقوي العلاقات الاجتماعية، شاركنا رأيك واقترح
                 فعالية.
             </p>
             <div class="row g-3">
                 <div class="col-12 col-md-6">
-                    <label for="name" class="form-label">الاسم</label>
-                    <input type="text" class="form-control" id="name" placeholder="الاسم">
+                    <label for="name" data-trans-key="name" class="form-label">الاسم</label>
+                    <input data-trans-key-placeholder="name" type="text" class="form-control" id="name" placeholder="الاسم">
                 </div>
                 <div class="col-12 col-md-6">
-                    <label for="email" class="form-label">البريد الإلكتروني</label>
+                    <label for="email" data-trans-key="email" class="form-label">البريد الإلكتروني</label>
                     <input type="email" class="form-control" id="email" placeholder="name@example.com">
                 </div>
                 <div class="col-12 col-md-6">
-                    <label for="event" class="form-label">الفعالية</label>
-                    <input type="text" class="form-control" id="event" placeholder="الفعالية">
+                    <label for="event" data-trans-key="event" class="form-label">الفعالية</label>
+                    <input data-trans-key-placeholder="event" type="text" class="form-control" id="event" placeholder="الفعالية">
                 </div>
                 <div class="col-12 col-md-6">
-                    <label for="description" class="form-label">الوصف</label>
-                    <textarea class="form-control" id="description" placeholder="الوصف"></textarea>
+                    <label for="description" data-trans-key="description" class="form-label">الوصف</label>
+                    <textarea data-trans-key-placeholder="description" class="form-control" id="description" placeholder="الوصف"></textarea>
                 </div>
                 <div class="col-12 col-md-6">
-                    <label for="suggest-city" class="form-label">المدينة</label>
-                    <select name="city" id="suggest-city" class="form-select">
-                        <option value="" selected disabled>بدون</option>
-                        <option value="اللاذقية">اللاذقية</option>
-                        <option value="دمشق">دمشق</option>
+                    <label for="suggest-city" data-trans-key="city" class="form-label">المدينة</label>
+                    <select data-trans-key-placeholder="city" name="city" id="suggest-city" class="form-select">
+                        <option data-trans-key="without" value="" selected disabled>بدون</option>
+                        <option data-trans-key="latakia" value="اللاذقية">اللاذقية</option>
+                        <option data-trans-key="damascus" value="دمشق">دمشق</option>
                     </select>
                 </div>
             </div>
-            <button id="suggest-event-submit" class="btn btn-primary mt-3 mx-auto d-block">تقديم</button>
+            <button id="suggest-event-submit" data-trans-key="submit"
+                class="btn btn-primary mt-3 mx-auto d-block">تقديم</button>
         </section>
         <div class="modal fade" id="filter-custom" tabindex="-1" aria-labelledby="filterCustomLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="filterCustomLabel">تصفية مخصصة</h1>
+                        <h1 data-trans-key="custom-filter" class="modal-title fs-5" id="filterCustomLabel">تصفية مخصصة
+                        </h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <div class="mb-3">
-                            <label for="query" class="form-label">البحث</label>
-                            <input type="text" class="form-control" id="query" placeholder="البحث">
+                            <label for="query" data-trans-key="search" class="form-label">البحث</label>
+                            <input data-trans-key-placeholder="search" type="text" class="form-control" id="query" placeholder="البحث">
                         </div>
                         <div class="mb-3">
-                            <label for="filter-city" class="form-label">المدينة</label>
+                            <label for="filter-city" data-trans-key="city" class="form-label">المدينة</label>
                             <select name="city" id="filter-city" class="form-select">
-                                <option value="">بدون</option>
-                                <option value="اللاذقية">اللاذقية</option>
-                                <option value="جبلة">جبلة</option>
-                                <option value="كسب">كسب</option>
-                                <option value="ساحة الشيخ ضاهر">ساحة الشيخ ضاهر</option>
+                                <option data-trans-key="without" value="" selected>بدون</option>
+                                <option data-trans-key="latakia" value="اللاذقية">اللاذقية</option>
+                                <option data-trans-key="jableh" value="جبلة">جبلة</option>
+                                <option data-trans-key="kassab" value="كسب">كسب</option>
+                                <option data-trans-key="sheikh-daher-square" value="ساحة الشيخ ضاهر">ساحة الشيخ ضاهر
+                                </option>
                             </select>
                         </div>
                         <div class="mb-3">
-                            <label for="date" class="form-label">التاريخ</label>
-                            <input type="date" class="form-control" id="date" placeholder="التاريخ">
+                            <label for="date" data-trans-key="date" class="form-label">التاريخ</label>
+                            <input data-trans-key-placeholder="date" type="date" class="form-control" id="date" placeholder="التاريخ">
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">إغلاق</button>
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
-                            id="filter-custom-submit">تصفية</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                            data-trans-key="close">إغلاق</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="filter-custom-submit"
+                            data-trans-key="filter">تصفية</button>
                     </div>
                 </div>
             </div>
@@ -272,20 +292,25 @@
     <footer class="bg-body-tertiary py-2">
         <div class="container mx-auto row p-4">
             <div class="col-12 col-md-6 px-md-4">
-                <h4 class="fw-medium border-bottom border-primary">عروس الساحل</h4>
-                <p class="text-muted">عروس الساحل هي موقع يهتم بالفعاليات المختلفة في المدينة</p>
+                <h4 data-trans-key="title" class="fw-medium border-bottom border-primary">عروس الساحل</h4>
+                <p data-trans-key="footer-description" class="text-muted">عروس الساحل هي موقع يهتم بالفعاليات المختلفة
+                    في المدينة</p>
             </div>
             <div class="col-12 col-md-3 px-md-4">
-                <h4 class="fw-medium border-bottom border-primary">الفعاليات</h4>
+                <h4 data-trans-key="events" class="fw-medium border-bottom border-primary">الفعاليات</h4>
                 <nav class="d-flex flex-column gap-2">
-                    <a href="./event.html" class="link w-fit">حفل اطلاق الهوية البصرية في اللاذقية</a>
-                    <a href="./event.html" class="link w-fit">مهرجان سوق التسوق في مدينة جبلة</a>
-                    <a href="./event.html" class="link w-fit">افتتاح معرض "العودة إلى المدرسة</a>
-                    <a href="./event.html" class="link w-fit">افتتاح معرض للحرف اليدوية</a>
+                    <a data-trans-key="event-title-1" href="./event.html" class="link w-fit">حفل اطلاق الهوية البصرية في
+                        اللاذقية</a>
+                    <a data-trans-key="event-title-2" href="./event.html" class="link w-fit">مهرجان سوق التسوق في مدينة
+                        جبلة</a>
+                    <a data-trans-key="event-title-3" href="./event.html" class="link w-fit">افتتاح معرض "العودة إلى
+                        المدرسة</a>
+                    <a data-trans-key="event-title-4" href="./event.html" class="link w-fit">افتتاح معرض للحرف
+                        اليدوية</a>
                 </nav>
             </div>
             <div class="col-12 col-md-3 px-md-4">
-                <h4 class="fw-medium border-bottom border-primary">تابعنا</h4>
+                <h4 data-trans-key="follow-us" class="fw-medium border-bottom border-primary">تابعنا</h4>
                 <nav class="d-flex flex-row flex-wrap gap-2">
                     <a href="#" class="text-decoration-none text-dark">
                         <svg width="26" height="26" class="hover-svg" viewBox="0 0 24 24">
@@ -304,19 +329,175 @@
         </div>
         <hr class="border-primary">
         <div class="container mx-auto text-center">
-            <p class="text-muted">جميع الحقوق محفوظة لعروس الساحل © 2025</p>
+            <p data-trans-key="copyright" class="text-muted">جميع الحقوق محفوظة لعروس الساحل © 2025</p>
         </div>
     </footer>
-    
+
     <!-- Scroll to Top Button -->
     <button id="scroll-to-top" title="العودة إلى الأعلى">
         <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" />
         </svg>
     </button>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/main.js"></script>
+    <script>
+        // الترجمة هنا، استخدمت طريقة ال attribute للترجمة لان مابدي ضيف بقصص ال id وفي ترجمات لح تتكر وتعتبر عملية اني ضيف مفتاح بدل من id مثل اطر العمل الكبيرة
+        const translations = {
+            "ar": {
+                "title_of_page": "الفعاليات",
+                "title": "عروس الساحل",
+                "home": "الرئيسية",
+                "events": "الفعاليات",
+                "about": "دليل الموقع",
+                "contact": "تواصل معنا",
+                "welcome": "مرحباً بكم في فعاليات ساحلنا",
+                "welcome-description": "اكتشف أجمل الفعاليات والأنشطة في مدينتنا الساحلية الجميلة. من الثقافة إلى الرياضة، ومن الموسيقى إلى الفعاليات العائلية",
+                "explore-events": "استكشف الفعاليات",
+                "events-this-week": "فعاليات هذا الأسبوع",
+                "gallery": "معرض الصور",
+                "previous": "السابق",
+                "next": "التالي",
+                "event-title-1": "حفل اطلاق الهوية البصرية في اللاذقية",
+                "event-description-1": "لقطات مميزة تنقل مشهد المشاركة الواسعة لأهالي اللاذقية في فعالية الهوية البصرية من قلب ساحة الشيخ ضاهر.",
+                "event-title-2": "مهرجان سوق التسوق في مدينة جبلة",
+                "event-description-2": "بمشاركة كريمة من السيد محمد عثمان محافظ اللاذقية، وقائد الأمن الداخلي للمحافظة والحضور الكرام تم اليوم افتتاح مهرجان سوق التسوق في مدينة جبلة.",
+                "event-title-3": "افتتاح معرض \"العودة إلى المدرسة\"",
+                "event-description-3": "تحت رعاية وزارة الاقتصاد والصناعة ومحافظة اللاذقية، وبمناسبة اقتراب العام الدراسي الجديد، افتتح معرض \"العودة إلى المدرسة\" والذي يضم تشكيلة واسعة من المستلزمات المدرسية بأسعار مخفضة",
+                "event-title-4": "افتاح معرض للحرف اليدوية",
+                "event-description-4": "بحضور محافظ اللاذقية السيد محمد عثمان، افتُتح اليوم معرض للحرف اليدوية والتقليدية في مدينة كسب، بمشاركة عدد من الحرفيين من مختلف مناطق المحافظة",
+                "categories": "أقسام الفعاليات",
+                "all-categories": "جميع الأقسام",
+                "celebration": "احتفالات",
+                "festival": "مهرجانات",
+                "exhibition": "معارض",
+                "organizers": "فريق المنظمين",
+                "organizer-name-1": "يحيى نسب",
+                "organizer-name-2": "نايف أحمد غزلان",
+                "organizer-name-3": "تيماء أبو حسون",
+                "organizer-name-4": "ورد ايمن رعوان",
+                "organizer-name-5": "شام نعيم",
+                "footer-description": "عروس الساحل هي موقع يهتم بالفعاليات المختلفة في المدينة",
+                "follow-us": "تابعنا",
+                "copyright": "جميع الحقوق محفوظة لعروس الساحل © 2025",
+                "event-of-the-week": "فعالية الاسبوع",
+                "custom-filter": "تصفية مخصصة",
+                "event-location-1": "ساحة الشيخ ضاهر",
+                "event-location-2": "جبلة",
+                "event-location-3": "اللاذقية",
+                "event-location-4": "كسب",
+                "event-details": "تفاصيل الفعالية",
+                "suggest-event": "اقترح فعالية",
+                "suggest-event-description": "هل لديك فعالية تريد اقتراحها لنا؟ تساهم في حل مشكلة أو تقوي العلاقات الاجتماعية، شاركنا رأيك واقترح فعالية.",
+                "name": "الاسم",
+                "email": "البريد الإلكتروني",
+                "event": "الفعالية",
+                "description": "الوصف",
+                "city": "المدينة",
+                "latakia": "اللاذقية",
+                "damascus": "دمشق",
+                "submit": "تقديم",
+                "search": "البحث",
+                "jableh": "جبلة",
+                "kassab": "كسب",
+                "sheikh-daher-square": "ساحة الشيخ ضاهر",
+                "date": "التاريخ",
+                "close": "إغلاق",
+                "filter": "تصفية",
+                "without": "بدون",
+                "description": "الوصف",
+                "city": "المدينة",
+                "date": "التاريخ"
+            },
+            "en": {
+                "title_of_page": "Events",
+                "title": "Coast Bride",
+                "home": "Home",
+                "events": "Events",
+                "about": "Site Guide",
+                "contact": "Contact Us",
+                "welcome": "Welcome to Our Coastal Events",
+                "welcome-description": "Discover the most beautiful events and activities in our beautiful coastal city. From culture to sports, from music to family events",
+                "explore-events": "Explore Events",
+                "events-this-week": "Events This Week",
+                "gallery": "Image Gallery",
+                "previous": "Previous",
+                "next": "Next",
+                "event-title-1": "Visual Identity Launch Ceremony in Latakia",
+                "event-description-1": "Distinctive shots conveying the widespread participation of Latakia residents in the visual identity event from the heart of Sheikh Daher Square.",
+                "event-title-2": "Shopping Festival in Jableh City",
+                "event-description-2": "With the gracious participation of Mr. Mohammed Othman, Governor of Latakia, the Internal Security Commander for the Governorate, and esteemed guests, the Shopping Festival in Jableh city was inaugurated today.",
+                "event-title-3": "Opening of \"Back to School\" Exhibition",
+                "event-description-3": "Under the patronage of the Ministry of Economy and Industry and Latakia Governorate, and on the occasion of the approaching new academic year, the \"Back to School\" exhibition was inaugurated, featuring a wide range of school supplies at reduced prices",
+                "event-title-4": "Opening of Handicrafts Exhibition",
+                "event-description-4": "In the presence of the Governor of Latakia, Mr. Mohammed Othman, a handicrafts and traditional crafts exhibition was opened today in the city of Kassab, with the participation of a number of artisans from various regions of the governorate",
+                "categories": "Event Categories",
+                "all-categories": "All Categories",
+                "celebration": "Celebrations",
+                "festival": "Festivals",
+                "exhibition": "Exhibitions",
+                "organizers": "Organizing Team",
+                "organizer-name-1": "Yahya Nasab",
+                "organizer-name-2": "Nayef Ahmed Ghazlan",
+                "organizer-name-3": "Taima Abu Hassoun",
+                "organizer-name-4": "Ward Ayman Rawan",
+                "organizer-name-5": "Sham Naim",
+                "footer-description": "Coast Bride is a website concerned with various events in the city",
+                "follow-us": "Follow Us",
+                "copyright": "All rights reserved to Coast Bride © 2025",
+                "event-of-the-week": "Event of the Week",
+                "custom-filter": "Custom Filter",
+                "event-location-1": "Sheikh Daher Square",
+                "event-location-2": "Jableh",
+                "event-location-3": "Latakia",
+                "event-location-4": "Kassab",
+                "event-details": "Event Details",
+                "suggest-event": "Suggest Event",
+                "suggest-event-description": "Do you have an event you want to suggest to us? Contribute to solving a problem or strengthening social relations, share your opinion and suggest an event.",
+                "latakia": "Latakia",
+                "damascus": "Damascus",
+                "submit": "Submit",
+                "search": "Search",
+                "jableh": "Jableh",
+                "kassab": "Kassab",
+                "sheikh-daher-square": "Sheikh Daher Square",
+                "date": "Date",
+                "close": "Close",
+                "filter": "Filter",
+                "without": "Without",
+                "name": "Name",
+                "email": "Email",
+                "event": "Event",
+                "description": "Description",
+                "city": "City",
+                "date": "Date"
+            }
+        };
+        document.addEventListener("DOMContentLoaded", () => {
+            const language = localStorage.getItem("language") || "ar";
+            const html = document.documentElement;
+            html.setAttribute("lang", language);
+            html.setAttribute("dir", language === "ar" ? "rtl" : "ltr");
+            document.title = translations[language].title_of_page;
+            document.querySelectorAll("[data-trans-key]").forEach(element => {
+                element.textContent = translations[language][element.getAttribute("data-trans-key")];
+                if (element.tagName === "OPTION") {
+                    element.value = translations[language][element.getAttribute("data-trans-key")];
+                }
+            });
+            document.querySelectorAll("[data-trans-key-placeholder]").forEach(element => {
+                element.placeholder = translations[language][element.getAttribute("data-trans-key-placeholder")];
+            });
+            document.getElementById("language-flag").src = `./assets/images/flag_${language === "ar" ? "USA" : "SYR"}.svg`;
+        });
+        function changeLanguage() {
+            const language = localStorage.getItem("language") || "ar";
+            localStorage.setItem("language", language === "ar" ? "en" : "ar");
+            window.location.reload();
+        }
+
+</script>
 </body>
 
 </html>
