@@ -233,3 +233,17 @@ a {
 .hover-svg:hover {
     fill: var(--bs-primary);
 }
+.flag {
+	display: block;
+}
+.flag-2 {
+	display: none;
+}
+@media (min-width: 992px) {
+	.flag {
+		display: none;
+	}
+	.flag-2 {
+		display: block;
+	}
+}

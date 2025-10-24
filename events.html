@@ -14,8 +14,16 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
             <a data-trans-key="title" class="navbar-brand text-primary fw-bold" href="./index.html">عروس الساحل</a>
+            <div class="flag">
+                <img onclick="changeLanguage()" class="language-flag" style="width: 32px; height: 24px;" src="./assets/images/flag_USA.svg" />
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav mb-2 mb-lg-0" style="margin-inline-start: auto;">
                     <li class="nav-item">
                         <a data-trans-key="home" class="nav-link link" aria-current="page"
                             href="./index.html">الرئيسية</a>
@@ -30,15 +38,9 @@
                         <a data-trans-key="contact" class="nav-link link" href="./contact.html">تواصل معنا</a>
                     </li>
                 </ul>
-                <div>
-                    <img onclick="changeLanguage()" id="language-flag" style="width: 32px; height: 24px;"
-                        src="./assets/images/flag_USA.svg" />
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            </div>
+            <div class="flag-2">
+                <img onclick="changeLanguage()" class="language-flag" style="width: 32px; height: 24px;" src="./assets/images/flag_USA.svg" />
             </div>
         </div>
     </nav>
@@ -489,7 +491,9 @@
             document.querySelectorAll("[data-trans-key-placeholder]").forEach(element => {
                 element.placeholder = translations[language][element.getAttribute("data-trans-key-placeholder")];
             });
-            document.getElementById("language-flag").src = `./assets/images/flag_${language === "ar" ? "USA" : "SYR"}.svg`;
+            document.querySelectorAll(".language-flag").forEach(element => {
+                element.src = `./assets/images/flag_${language === "ar" ? "USA" : "SYR"}.svg`;
+            });
         });
         function changeLanguage() {
             const language = localStorage.getItem("language") || "ar";
